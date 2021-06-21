@@ -10,19 +10,29 @@
 </h1>
 
 ## :warning: **EM DESENVOLVIMENTO** :warning:
-</br>
 
 ## 📃 O que é MultiStack?
 
 NextLevelWeek é um evento online produzido por [Rocketseat](https://github.com/rocketseat), NLW é um evento com muito código, desafios, networking e um único objetivo: Avançar para o próximo nível. Sempre com um conteúdo novo a cada edição, você vai descobrir na prática uma metodologia eficiente para o seu aprendizado em programação, além de conceitos, ferramentas que vão impulsionar sua carreira.
 
 ### Aulas (Trilhas React/ Node.js/ React Native)
-- Dia 1: Liftoff. 20/06 - (React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)
-- Dia 2: Maximum Speed. 21/06 - (React X) / (Node.js X) / (React Native X)
-- Dia 3: In Orbit. 22/06 - (React X) / (Node.js X) / (React Native X)
-- Dia 4: Landing. 23/06 - (React X) / (Node.js X) / (React Native X)
-- Dia 5: Surface Exploration. 24/06 - (React X) / (Node.js X) / (React Native X)
-- Dia 6: O Próximo Nível. 25/06 - (React X) / (Node.js X) / (React Native X)
+- Dia 1: Liftoff. 20/06
+(React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)
+
+- Dia 2: Maximum Speed. 21/06 
+(React X) / (Node.js X) / (React Native X)
+
+- Dia 3: In Orbit. 22/06
+(React X) / (Node.js X) / (React Native X)
+
+- Dia 4: Landing. 23/06
+(React X) / (Node.js X) / (React Native X)
+
+- Dia 5: Surface Exploration. 24/06
+(React X) / (Node.js X) / (React Native X)
+
+- Dia 6: O Próximo Nível. 25/06
+(React X) / (Node.js X) / (React Native X)
 
 ## :rocket: Tecnologias
 
