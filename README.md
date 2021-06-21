@@ -16,8 +16,8 @@
 NextLevelWeek é um evento online produzido por [Rocketseat](https://github.com/rocketseat), NLW é um evento com muito código, desafios, networking e um único objetivo: Avançar para o próximo nível. Sempre com um conteúdo novo a cada edição, você vai descobrir na prática uma metodologia eficiente para o seu aprendizado em programação, além de conceitos, ferramentas que vão impulsionar sua carreira.
 
 ### Aulas (Trilhas React/ Node.js/ React Native)
-- Dia 1: Liftoff. 20/06 <br/>
-(React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)
+- **Dia 1: Liftoff. 20/06 <br/>
+(React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)**
 
 - Dia 2: Maximum Speed. 21/06 <br/>
 (React X) / (Node.js X) / (React Native X)
