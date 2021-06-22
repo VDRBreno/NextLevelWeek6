@@ -64,7 +64,7 @@ $ cd NextLevelWeek6/web
 $ yarn
 
 # Iniciar
-$ npm start
+$ yarn start
 
 # rodando em localhost:3000
 ```
