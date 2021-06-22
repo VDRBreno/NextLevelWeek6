@@ -39,6 +39,7 @@ NextLevelWeek é um evento online produzido por [Rocketseat](https://github.com/
 O projeto está sendo desenvolvido usando:
 
 - [React][reactjs]
+- [Firebase][firebase]
 - [TypeScript][typescript]
 - [ReactNative][Reactnative]
 - [Expo][expo]
@@ -116,3 +117,4 @@ $ expo start
 [django]: https://www.djangoproject.com
 [expo]: https://expo.io
 [reactnative]: https://reactnative.dev
+[firebase]: https://firebase.google.com/?hl=pt
