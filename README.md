@@ -19,8 +19,8 @@ NextLevelWeek é um evento online produzido por [Rocketseat](https://github.com/
 - **Dia 1: Liftoff. 20/06 <br/>
 (React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)**
 
-- Dia 2: Maximum Speed. 21/06 <br/>
-(React :heavy_check_mark:) / (Node.js X) / (React Native :heavy_check_mark:))
+- **Dia 2: Maximum Speed. 21/06 <br/>
+(React :heavy_check_mark:) / (Node.js :heavy_check_mark:) / (React Native :heavy_check_mark:)**
 
 - Dia 3: In Orbit. 22/06 <br/>
 (React X) / (Node.js X) / (React Native X)
@@ -85,9 +85,9 @@ $ cd NextLevelWeek6/server-Node
 $ yarn
 
 # Iniciar
-$ yarn run dev
+$ yarn dev
 
-# rodando em localhost:8000
+# rodando em localhost:3333
 ```
 
 ### Instalar Mobile (Trilha React Native)
