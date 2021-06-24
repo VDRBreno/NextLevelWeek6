@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   content: {
-    flex: 1
+    flex: 1,
+    marginLeft: 20
   },
   header: {
     width: '100%',
