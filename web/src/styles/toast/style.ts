@@ -20,5 +20,12 @@ export const toastStyle = {
       primary: '#61d345',
       secondary: '#FFFAEE',
     }
+  },
+  info: {
+    style: {
+      border: '1px solid #18b1db',
+      padding: '16px',
+      color: '#18b1db'
+    }
   }
 }

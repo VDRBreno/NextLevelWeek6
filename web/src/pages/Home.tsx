@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import { Button } from '../components/Button';
 
@@ -13,7 +13,7 @@ import googleIconImg from '../assets/images/google-icon.svg'
 import '../styles/auth.scss';
 import { database } from '../services/firebase';
 
-function Home() {
+export function Home() {
   
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
@@ -41,7 +41,12 @@ function Home() {
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
     if(!roomRef.exists()) {
-      alert('Room does not exists.');
+      alert('Esta sala não existe.');
+      return;
+    }
+
+    if(roomRef.val().endedAt) {
+      alert('Esta sala foi fechada.');
       return;
     }
 
@@ -60,11 +65,18 @@ function Home() {
       <main>
         <div className='main-content'>
           <img src={logoImg} alt='Letmeask' />
-          <button onClick={handleCreateRoom} className='create-room'>
-            <img src={googleIconImg} alt='Logo do Google' />
-            Crie sua sala com o Google
-          </button>
-          <div className='separator'>ou entre em uma sala</div>
+          {!user
+            ? (
+              <>
+                <button onClick={handleCreateRoom} className='create-room'>
+                  <img src={googleIconImg} alt='Logo do Google' />
+                  Crie sua sala com o Google
+                </button>
+                <div className='separator'>ou entre em uma sala</div>
+              </>
+            )
+            : null
+          }
           <form onSubmit={handleJoinRoom}>
             <input
               type='text'
@@ -76,10 +88,18 @@ function Home() {
               Entrar na sala
             </Button>
           </form>
+          {user
+            ? (
+              <>
+                <p>
+                  Quer criar uma sala? <Link to='/rooms/new'>Clique aqui</Link>
+                </p>
+              </>
+            )
+            : null
+          }
         </div>
       </main>
     </div>
   );
 }
-
-export default Home;

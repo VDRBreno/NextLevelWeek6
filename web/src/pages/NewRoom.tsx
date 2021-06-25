@@ -12,7 +12,7 @@ import logoImg from '../assets/images/logo.svg';
 
 import '../styles/auth.scss';
 
-function NewRoom() {
+export function NewRoom() {
 
   const history = useHistory();
   const { user } = useAuth();
@@ -69,5 +69,3 @@ function NewRoom() {
     </div>
   );
 }
-
-export default NewRoom;

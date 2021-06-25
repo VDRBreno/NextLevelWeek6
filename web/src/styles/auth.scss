@@ -52,11 +52,12 @@
 
     > img {
       align-self: center;
+      margin-bottom: 60px;
     }
 
     h2 {
       font-size: 24px;
-      margin: 64px 0 24px;
+      margin-bottom: 20px;
       font-family: 'Poppins', sans-serif;
     }
 
@@ -90,7 +91,6 @@
   }
 
   .create-room {
-    margin-top: 64px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
