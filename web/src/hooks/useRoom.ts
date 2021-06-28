@@ -16,7 +16,7 @@ type FirebaseQuestions = Record<string, {
   }>;
 }>
 
-type QuestionProps = {
+export type QuestionProps = {
   id: string;
   author: {
     name: string;
@@ -35,12 +35,37 @@ export function useRoom(roomId: string) {
 
   const [title, setTitle] = useState('');
   const [questions, setQuestions] = useState<QuestionProps[]>([]);
+  const [error, setError] = useState('');
+  const [isEndedRoom, setIsEndedRoom] = useState(false);
+
+  function sortQuestions(a: any, b: any, type: string) {
+
+    if(a[type] < b[type]) {
+      return -1;
+    }
+    if(a[type] > b[type]) {
+      return 1;
+    }
+
+    return 0;
+
+  }
 
   useEffect(() => {
     const roomRef = database.ref(`rooms/${roomId}`);
 
     roomRef.on('value', room => {
       const databaseRoom = room.val();
+      
+      if(!databaseRoom) {
+        setError('Esta sala não existe!');
+        return;
+      }
+
+      if(databaseRoom?.endedAt) {
+        setIsEndedRoom(true);
+      }
+
       const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
 
       const parsedQuestions = Object.entries(firebaseQuestions).map(([key, value]) => {
@@ -56,7 +81,7 @@ export function useRoom(roomId: string) {
       });
 
       setTitle(databaseRoom.title);
-      setQuestions(parsedQuestions);
+      setQuestions(parsedQuestions.sort((a, b) => sortQuestions(a, b, 'isAnswered')));
     });
 
     return () => {
@@ -64,5 +89,5 @@ export function useRoom(roomId: string) {
     }
   }, [roomId, user?.id]);
 
-  return { questions, title }
+  return { questions, title, error, isEndedRoom }
 }
