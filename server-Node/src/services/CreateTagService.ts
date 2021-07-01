@@ -1,9 +1,11 @@
 import { getCustomRepository } from 'typeorm';
+
 import { TagsRepositories } from '../repositories/Tagsrepositories';
 
 class CreateTagService {
 
   async execute(name: string) {
+
     const tagsRepositories = getCustomRepository(TagsRepositories);
 
     if(!name) {
@@ -26,6 +28,7 @@ class CreateTagService {
 
 
     return tag;
+    
   }
 
 }

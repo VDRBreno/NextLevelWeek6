@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingHorizontal: 24
   },
   title: {
     fontFamily: theme.fonts.title700,

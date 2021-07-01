@@ -19,6 +19,8 @@ export const styles = StyleSheet.create({
   },
   matches: {
     marginTop: 24,
-    marginLeft: 24
+    marginLeft: 24,
+    flex: 1,
+    paddingBottom: 100
   }
 });

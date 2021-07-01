@@ -40,28 +40,31 @@ export function AppointmentDetails() {
           </BorderlessButton>
         }
       />
-
-      <ImageBackground
-        source={BannerImg}
-        style={styles.banner}
-      >
-        <View style={styles.bannerContent}>
-          <Text style={styles.title}>Lendários</Text>
-
-          <Text style={styles.subtitle}>É hoje que vamos chegar ao challenger sem perder uma partida na md10</Text>
-        </View>
-      </ImageBackground>
-
-      <ListHeader
-        title='Jogadores'
-        subtitle='Total 3'
-      />
-
+      
       <FlatList
         data={members}
         keyExtractor={item => item.id}
+        ListHeaderComponent={() => (
+          <>
+            <ImageBackground
+              source={BannerImg}
+              style={styles.banner}
+            >
+              <View style={styles.bannerContent}>
+                <Text style={styles.title}>Lendários</Text>
+
+                <Text style={styles.subtitle}>É hoje que vamos chegar ao challenger sem perder uma partida na md10</Text>
+              </View>
+            </ImageBackground>
+
+            <ListHeader
+              title='Jogadores'
+              subtitle='Total 3'
+            />
+          </>
+        )}
+        ListHeaderComponentStyle={{ marginBottom: 25 }}
         ItemSeparatorComponent={() => <ListDivider onCenter />}
-        style={styles.members}
         renderItem={({ item }) => (
           <Member data={item} />
         )}

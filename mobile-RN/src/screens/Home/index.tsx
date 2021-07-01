@@ -13,7 +13,7 @@ import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
-  
+
   const [category, setCategory] = useState('');
 
   const navigation = useNavigation();
@@ -21,7 +21,10 @@ export function Home() {
   const appointments = [
     { id: '1', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' },
     { id: '2', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' },
-    { id: '3', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' }
+    { id: '3', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' },
+    { id: '4', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' },
+    { id: '5', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' },
+    { id: '6', guild: { id: '1', name: 'Lendários', icon: null, owner: true }, category: '1', date: '22/06 às 20:40h', description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10' }
   ]
 
   function handleCategorySelect(categoryId: string) {
@@ -38,38 +41,37 @@ export function Home() {
 
   return (
     <Background>
-      <View>
-        <View style={styles.header}>
-          <Profile />
-          <ButtonAdd onPress={handleAppointmentCreate} />
-        </View>
-
-        <CategorySelect
-          categorySelected={category}
-          setCategory={handleCategorySelect}
-          hasCheckBox={true}
-        />
-
-        <View style={styles.content}>
-          <ListHeader
-            title='Partidas agendadas'
-            subtitle='Total 6'
-          />
-
-          <FlatList
-            data={appointments}
-            keyExtractor={item => item.id}
-            style={styles.matches}
-            ItemSeparatorComponent={() => <ListDivider />}
-            renderItem={({ item }) => (
-              <Appointment 
-                data={item}
-                onPress={handleAppointmentDetails}
-              />
-            )}
-          />
-        </View>
+      <View style={styles.header}>
+        <Profile />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
+
+      <CategorySelect
+        categorySelected={category}
+        setCategory={handleCategorySelect}
+        hasCheckBox={true}
+      />
+
+      <View style={styles.content}>
+        <ListHeader
+          title='Partidas agendadas'
+          subtitle='Total 6'
+        />
+      </View>
+
+      <FlatList
+        data={appointments}
+        keyExtractor={item => item.id}
+        style={styles.matches}
+        ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{ paddingBottom: 30 }}
+        renderItem={({ item }) => (
+          <Appointment
+            data={item}
+            onPress={handleAppointmentDetails}
+          />
+        )}
+      />
     </Background>
   );
 }

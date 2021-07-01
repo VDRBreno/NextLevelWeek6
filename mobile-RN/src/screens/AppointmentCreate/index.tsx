@@ -25,6 +25,11 @@ export function AppointmentCreate() {
   const [category, setCategory] = useState('');
   const [openGuildsModal, setOpenGuildsModal] = useState(false);
   const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
+  const [textarea, setTextarea] = useState('');
+
+  function handleCategorySelect(categoryId: string) {
+    setCategory(categoryId);
+  }
 
   function handleOpenGuilds() {
     setOpenGuildsModal(true);
@@ -41,10 +46,10 @@ export function AppointmentCreate() {
       style={styles.container}
     >
       <Background>
+        <Header 
+          title='Detalhes'
+        />
         <ScrollView>
-          <Header 
-            title='Detalhes'
-          />
 
           <Text style={[styles.label, { marginLeft: 24, marginTop: 36, marginBottom: 18 }]}>
             Categoria
@@ -53,7 +58,7 @@ export function AppointmentCreate() {
           <CategorySelect
             hasCheckBox
             categorySelected={category}
-            setCategory={setCategory}
+            setCategory={handleCategorySelect}
           />
 
           <View style={styles.form}>
@@ -116,7 +121,10 @@ export function AppointmentCreate() {
               </Text>
 
               <Text style={styles.caracteresLimit}>
-                Max 100 caracteres
+                {100 - textarea.length === 100 
+                  ? 'Max 100 caracteres' 
+                  : `${100 - textarea.length} caracteres restantes`
+                }
               </Text>
             </View>
 
@@ -125,6 +133,8 @@ export function AppointmentCreate() {
               maxLength={100}
               numberOfLines={5}
               autoCorrect={false}
+              value={textarea}
+              onChangeText={setTextarea}
             />
 
             <View style={styles.footer}>

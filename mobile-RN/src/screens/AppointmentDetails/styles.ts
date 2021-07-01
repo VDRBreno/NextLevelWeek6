@@ -24,11 +24,8 @@ export const styles = StyleSheet.create({
   subtitle: {
     fontSize: 13,
     fontFamily: theme.fonts.text400,
-    color: theme.colors.heading
-  },
-  members: {
-    marginLeft: 24,
-    marginTop: 27
+    color: theme.colors.heading,
+    lineHeight: 26
   },
   footer: {
     paddingHorizontal: 24,

@@ -1,4 +1,3 @@
-import { Inter_200ExtraLight } from '@expo-google-fonts/inter';
 import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
 
@@ -12,8 +11,8 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.overlay
   },
   bar: {
-    width: 39,
-    height: Inter_200ExtraLight,
+    width: 40,
+    height: 4,
     borderRadius: 2,
     backgroundColor: theme.colors.secondary30,
     alignSelf: 'center',
