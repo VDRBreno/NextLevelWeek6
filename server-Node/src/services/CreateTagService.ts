@@ -1,6 +1,6 @@
 import { getCustomRepository } from 'typeorm';
 
-import { TagsRepositories } from '../repositories/Tagsrepositories';
+import { TagsRepositories } from '../repositories/TagsRepositories';
 
 class CreateTagService {
 

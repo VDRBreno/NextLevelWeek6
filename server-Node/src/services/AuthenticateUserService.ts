@@ -31,7 +31,7 @@ class AuthenticateUserService {
 
     const token = sign({
       email: user.email,  
-    }, 'c3c8b3c1a1e86cbc39236aa7d1395382', {
+    }, process.env.PUBLIC_JWT_TOKEN, {
       subject: user.id,
       expiresIn: '1d'
     });
