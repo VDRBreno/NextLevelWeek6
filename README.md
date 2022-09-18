@@ -9,7 +9,7 @@
   </div>
 </h1>
 
-## :warning: **EM DESENVOLVIMENTO** :warning:
+## :warning: **DESCONTINUADO** :warning:
 
 ## 📃 O que é NextLevelWeek?
 
